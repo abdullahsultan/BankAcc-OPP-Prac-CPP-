@@ -42,8 +42,7 @@ public:
   }
   void set(){
       double temp;
-      temp=(10*monthly_salary)/100;
-      monthly_salary=monthly_salary+temp;
+      monthly_salary=((10*monthly_salary)/100)+monthly_salary;
   }
   string get_fst_name(){
     return first_name;
@@ -58,6 +57,25 @@ private:
   string first_name,last_name;
   double monthly_salary;
 
+};
+//T3
+class Invoice
+{
+public:
+  Invoice(string num,string des,int qty,double pr){
+    number=num;description=des;quantity=qty;price=pr;
+  }
+  double getInvoiceAmount()
+  {return (quantity*price);}
+  string getnum(){return number;}
+  string getdes(){return description;}
+  int getqty(){return quantity;}
+  double getprice(){return price;}
+private:
+  string number;
+  string description;
+  int quantity;
+  double price;
 };
 // Main
 int main ()
@@ -80,6 +98,11 @@ cout<<"Your remaining balance = "<<withdraw<<'\n';
 a1.set();a2.set();
 std::cout <<"Salary of "<< a1.get_fst_name()<<" "<<a1.get_lst_name()<<" is = "<<a1.get_salary()<<'\n';
 std::cout <<"Salary of "<< a2.get_fst_name()<<" "<<a2.get_lst_name()<<" is = "<<a2.get_salary()<<'\n';
+
+//T3
+Invoice tea("1","Tea",2,250),soap("2","Soap",5,50),cookies("3","cookies",3,20)
+ cout<<"Item    Description   Quantity    Price";
+ cout<<
 
 return 0;
 }
