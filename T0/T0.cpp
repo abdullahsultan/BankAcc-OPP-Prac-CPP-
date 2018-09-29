@@ -39,7 +39,7 @@ double balance;
 int main ()
 {
 Account acct1(45); //T0
-employee a1(15000,"Ali","Ahmad"),a2(20000,"Usama","Asghar");  //T1
+  //T1
 //T0
 double withdraw;
 std::cout<<"Account 1 Balance is: "<<acct1.getBalance(200)<<"\n";
