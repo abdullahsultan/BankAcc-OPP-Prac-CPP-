@@ -20,7 +20,10 @@ public:
     return last_name;
   }
   double get_salary(){
+    if(monthly_salary>=0)
     return monthly_salary;
+    else
+    {return 0;}
   }
 private:
   string first_name,last_name;
