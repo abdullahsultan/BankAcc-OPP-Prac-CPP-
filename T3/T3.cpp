@@ -12,7 +12,10 @@ public:
   string getnum(){return number;}
   string getdes(){return description;}
   int getqty(){return quantity;}
-  double getprice(){return price;}
+  double getprice(){if(price>=0)
+                  return price;
+                   else
+                    return 0;}
 private:
   string number;
   string description;

@@ -5,6 +5,10 @@ using namespace std;
 class Account
 {
 public:
+Account()
+{
+  
+}
 Account (double initalbalance)
 {
   balance = initalbalance;
@@ -38,7 +42,7 @@ double balance;
 // Main
 int main ()
 {
-Account acct1(45); //T0
+Account acct1(45),acct2; //T0
   //T1
 //T0
 double withdraw;
